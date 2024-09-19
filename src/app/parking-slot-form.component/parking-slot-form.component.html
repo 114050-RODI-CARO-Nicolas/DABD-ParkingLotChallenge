@@ -1,0 +1,44 @@
+<!-- MORE INFORMATION ABOUT THIS FORM HERE: https://getbootstrap.com/docs/5.3/forms/validation/ -->
+<form class="row g-3 was-validated" novalidate>
+  <div class="col-md-4">
+    <label for="inputModel" class="form-label">Modelo</label>
+    <input type="text" class="form-control" id="inputModel" />
+    <div class="invalid-feedback">Mensaje validacion.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="inputDomain" class="form-label">Dominio</label>
+    <input type="text" class="form-control" id="inputDomain" />
+    <div class="invalid-feedback">Mensaje validacion.</div>
+  </div>
+  <div class="col-md-6">
+    <label for="checkInInputTime" class="form-label">Ingreso</label>
+    <input type="text" class="form-control" id="checkInInputTime" />
+    <div class="invalid-feedback">Mensaje validacion.</div>
+  </div>
+  <div class="col-md-3">
+    <label for="brandSelect" class="form-label">Marca</label>
+    <select class="form-select" id="brandSelect">
+      <option value="">opciones...</option>
+    </select>
+    <div class="invalid-feedback">Mensaje validacion.</div>
+  </div>
+  <div class="col-md-3">
+    <label for="vehiculeTypeTypeSelect" class="form-label">Tipo Vehiculo</label>
+    <select class="form-select" id="vehicleTypeSelect">
+      <option value="">opciones...</option>
+    </select>
+    <div class="invalid-feedback">Mensaje validacion.</div>
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="newDomainCheck" />
+      <label class="form-check-label" for="newDomainCheck">
+        Nuevo dominio?
+      </label>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-secondary" type="submit">Cancelar</button>
+    <button class="btn btn-primary" type="submit">Registrar ingreso</button>
+  </div>
+</form>
