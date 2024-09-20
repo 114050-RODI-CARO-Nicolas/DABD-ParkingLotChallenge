@@ -86,7 +86,7 @@ export const slot9 = {
   totalPlaces: 8,
 };
 
-export const PARKING_LOT = [
+const PARKING_LOT_LIST = [
   slot1, empty, empty, empty, slot2, empty, // first row
   empty, empty, empty, empty, empty, empty, // second row
   empty, empty, slot3, empty, empty, empty, // third row
@@ -94,6 +94,6 @@ export const PARKING_LOT = [
   empty, slot7, slot8, slot9, empty, empty, // fifth row
 ];
 
-export const PARKING_LOT_COPY = [
-  ...JSON.parse(JSON.stringify(PARKING_LOT))
+export const PARKING_LOT = [
+  ...JSON.parse(JSON.stringify(PARKING_LOT_LIST))
 ];
