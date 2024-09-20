@@ -52,22 +52,22 @@ El objetivo de este desarrollo es poder registrar el ingreso de cada vehículo, 
 - **SPA** La pagina nunca debe ser recargada ateniendose al mecanismo proporcionado por las aplicaciones de una sola página.
 
 ## MockUps
-![image](https://github.com/user-attachments/assets/3279d9de-f4ea-45fc-895d-95f3f488a7f8)
-![image](https://github.com/user-attachments/assets/2a1acc62-9738-40cc-9e8f-54449902ac9e)
-![image](https://github.com/user-attachments/assets/84358f1f-287d-4d79-b0dc-516d35a92ff1)
+![mu1](https://github.com/user-attachments/assets/10b0fa16-0ee3-474b-ba8e-38d05650e7e7)
+![mu2](https://github.com/user-attachments/assets/03ff091d-e1c7-4b38-bbd3-73822aa30212)
+![mu3](https://github.com/user-attachments/assets/3adf90be-0989-43eb-98fc-3163817be1fd)
 
 
 ## Ejemplos: 
 Teniendo en cuenta la primer imagen proporcionada como mock up de la disponibilidad de lugares, a continuación se presentan algunos ejemplos visuales indicando como debería quedar la disponibilidad de lugares al ingresar un nuevo vehiculo:
 
 **En caso de agregar una moto:**
-![image](https://github.com/user-attachments/assets/99b6558d-7f39-48fb-a381-a19ee1c4f4ba)
+![mu4](https://github.com/user-attachments/assets/80c2e893-b38e-4537-bb54-31eac100dc00)
 
 **En caso de agregar un auto:**
-![image](https://github.com/user-attachments/assets/9171d8a9-099f-4c7e-a747-dda5452357b2)
+![mu5](https://github.com/user-attachments/assets/47d37670-0a31-4dd2-b0d4-66601144809e)
 
 **En caso de agregar una camioneta:**
-![image](https://github.com/user-attachments/assets/722bef2b-74b3-40c2-a5bd-3f63f299677a)
+![mu6](https://github.com/user-attachments/assets/41a7e56b-64d1-4e09-b73d-4689e972348b)
 
 ## Rubrica:
 - Registro ingreso (3)
