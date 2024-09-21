@@ -1,0 +1,28 @@
+<div class="container mt-4">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        Elige una opción
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" (click)="showForm()">Formulario de Auto</a></li>
+        <li><a class="dropdown-item" (click)="showMap()">Mapa del Estacionamiento</a></li>
+      </ul>
+    </div>
+  
+
+    <div class="mt-4">
+        @if(
+            currentView==='form'
+        ){
+            <app-parking-slot-form
+            
+            ></app-parking-slot-form>
+        }
+        @if(currentView==='map'){
+            <app-parkingmap> </app-parkingmap>
+
+        }
+    
+    </div>
+  </div>
+  

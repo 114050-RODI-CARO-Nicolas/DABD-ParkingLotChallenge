@@ -1,0 +1,37 @@
+<div class="container mt-4">
+  <h3>Mapa del Estacionamiento</h3>
+
+<div class="parking-lot">
+  @for (slot of parkingLot; track $index) 
+  {
+    @if(slot.vehicules.length === 0)
+    {
+      <div><p>Vacío</p></div>
+    }
+    @if(slot.vehicules.length >0)
+    {
+      <div>
+        @for (vehicule of slot.vehicules; track $index) {
+          {{displayVehicleIcon(vehicule.VehiculeType)}}
+        }
+      </div>
+    }
+  }
+</div>
+
+<style>
+  .parking-lot {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
+  .slot {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  .slot h5 {
+    margin-bottom: 10px;
+  }
+</style>

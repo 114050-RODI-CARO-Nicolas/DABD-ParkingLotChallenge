@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ParkingSlotRequestComponent } from "./parking-slot-form.component/parking-slot-form.component";
+import { LayoutComponent } from "./layout/layout.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ParkingSlotRequestComponent],
+  imports: [RouterOutlet, ParkingSlotRequestComponent, LayoutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
