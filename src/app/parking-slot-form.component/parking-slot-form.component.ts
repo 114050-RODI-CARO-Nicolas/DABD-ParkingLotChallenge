@@ -17,24 +17,39 @@ export class ParkingSlotRequestComponent {
   
   private vehicleService = inject(VehiculoService);
   private miscellaneousService = inject(MiscellaneousService);
-  //@Output() newVehicleAdded = new EventEmitter<void>();
-
-
-
-
-  vehiculo : Vehicle = new Vehicle();
-
   availableBrands = this.miscellaneousService.getBrands();
   VehicleTypeReference = VehiculeType
+
+  modelo : string = "";
+  dominio : string = "";
+  ingreso : string = "";
+  marca : string = "";
+  tipoVehiculo : undefined;
+
+
 
   sendForm(form : NgForm){
     if(form.valid)
     {
-      console.log('vehiculo at sendForm ', this.vehiculo)
-      this.vehicleService.addVehicle(this.vehiculo)
-      //this.newVehicleAdded.emit();
+
+      const newVehiculo :  Vehicle = {
+        modelo : form.value.modelo,
+        dominio: form.value.dominio,
+        ingreso : form.value.ingreso,
+        marca : form.value.marcaSeleccionada,
+        tipoVehiculo : form.value.tipoVehiculoSeleccionado,
+        esDominioNuevo : form.value.esDominioNuevo
       
+      }
       
+      console.log('new Vehiculo' , newVehiculo)
+      this.vehicleService.addVehicle(newVehiculo)
+    }
+    else {
+      const formElement = document.querySelector('form');
+      if(formElement){
+        formElement.classList.add('was-validated')
+      }
     }
 
   }

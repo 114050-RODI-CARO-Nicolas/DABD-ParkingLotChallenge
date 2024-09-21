@@ -6,13 +6,13 @@
   {
     @if(slot.vehicules.length === 0)
     {
-      <div><p>Vacío</p></div>
+      <div><p>.</p></div>
     }
     @if(slot.vehicules.length >0)
     {
       <div>
         @for (vehicule of slot.vehicules; track $index) {
-          {{displayVehicleIcon(vehicule.VehiculeType)}}
+          {{displayVehicleIcon(vehicule)}}
         }
       </div>
     }

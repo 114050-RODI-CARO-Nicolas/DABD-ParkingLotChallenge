@@ -1,15 +1,15 @@
 <!-- MORE INFORMATION ABOUT THIS FORM HERE: https://getbootstrap.com/docs/5.3/forms/validation/ -->
-<form #parkingSlotForm="ngForm" class="row g-3 was-validated" novalidate (ngSubmit)="sendForm(parkingSlotForm)">
+<form #parkingSlotForm="ngForm" class="row g-3" (ngSubmit)="sendForm(parkingSlotForm)">
   <div class="col-md-4">
     <label for="inputModel" class="form-label">Modelo</label>
     <input #modelo="ngModel" type="text" class="form-control" id="inputModel" 
-    [(ngModel)]="vehiculo.modelo"
+    ngModel
     name="modelo" minlength="3"
     />
     <div class="invalid-feedback">
       @if(modelo.invalid && (modelo.dirty || modelo.touched))
       {
-        @if(modelo.getError('minglength'))
+        @if(modelo.getError('minlength'))
         {
           <p>El modelo requiere 3 caracteres.</p>
         }
@@ -19,8 +19,8 @@
   <div class="col-md-4">
     <label for="inputDomain" class="form-label">Dominio</label>
     <input #dominio="ngModel" type="text" class="form-control" id="inputDomain" name="dominio"
-    [(ngModel)]="vehiculo.dominio" 
-    [attr.minlength]="vehiculo.esDominioNuevo ? 7 : 6"
+    ngModel
+    [attr.minlength]="esDominioNuevo ? 7 : 6"
     required 
     minlength="6"
     
@@ -44,7 +44,8 @@
   </div>
   <div class="col-md-6">
     <label for="checkInInputTime" class="form-label">Ingreso</label>
-    <input #ingreso="ngModel" type="text" class="form-control" id="checkInInputTime" name="ingreso" [(ngModel)]="vehiculo.ingreso" 
+    <input #ingreso="ngModel" type="text" class="form-control" id="checkInInputTime" name="ingreso" 
+    ngModel
     required/>
     <div class="invalid-feedback">
       @if(ingreso.invalid && (ingreso.dirty || ingreso.touched))
@@ -59,7 +60,8 @@
   </div>
   <div class="col-md-3">
     <label for="brandSelect" class="form-label">Marca</label>
-    <select class="form-select" id="brandSelect" name="marcaSeleccionada" [(ngModel)]="vehiculo.marcaSeleccionada">
+    <select class="form-select" id="brandSelect" name="marcaSeleccionada" 
+    ngModel>
       @for(brand of availableBrands; track $index){
         <option [value]="brand.id">{{brand.name}}</option>
       }
@@ -69,7 +71,9 @@
   <div class="col-md-3">
     <label for="vehiculeTypeTypeSelect" class="form-label" >Tipo Vehiculo</label>
     <select #tipoVehiculo="ngModel" 
-    name="tipoVehiculoSeleccionado" [(ngModel)]="vehiculo.tipoVehiculoSeleccionado" required
+    name="tipoVehiculoSeleccionado"
+    ngModel
+    required
     class="form-select" id="vehicleTypeSelect">
       <option [ngValue]="VehicleTypeReference.MOTORCYCLE">Moto</option>
       <option [ngValue]="VehicleTypeReference.CAR">Auto</option>
@@ -90,7 +94,7 @@
   <div class="col-12">
     <div class="form-check">
       <input   class="form-check-input" type="checkbox" id="newDomainCheck"
-      name="esDominioNuevo" [(ngModel)]="vehiculo.esDominioNuevo" required
+      name="esDominioNuevo" ngModel required
       #esDominioNuevo="ngModel"
       />
       <label class="form-check-label" for="newDomainCheck">

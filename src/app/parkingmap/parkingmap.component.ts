@@ -26,6 +26,7 @@ export class ParkingmapComponent implements OnInit {
 
 
   displayVehicleIcon(vehicleType: VehiculeType): string {
+    //console.log('display Vehicle Icon. vehicleType: ', vehicleType)
     switch (vehicleType) {
       case VehiculeType.CAR:
         return 'A'; 
