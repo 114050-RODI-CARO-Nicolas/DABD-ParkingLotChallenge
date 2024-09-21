@@ -20,13 +20,6 @@ export class ParkingSlotRequestComponent {
   availableBrands = this.miscellaneousService.getBrands();
   VehicleTypeReference = VehiculeType
 
-  modelo : string = "";
-  dominio : string = "";
-  ingreso : string = "";
-  marca : string = "";
-  tipoVehiculo : undefined;
-
-
 
   sendForm(form : NgForm){
     if(form.valid)
@@ -43,7 +36,8 @@ export class ParkingSlotRequestComponent {
       }
       
       console.log('new Vehiculo' , newVehiculo)
-      this.vehicleService.addVehicle(newVehiculo)
+      this.vehicleService.addVehicle(newVehiculo);
+      form.resetForm();
     }
     else {
       const formElement = document.querySelector('form');

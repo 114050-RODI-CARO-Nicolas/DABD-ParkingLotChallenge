@@ -12,7 +12,11 @@
     {
       <div>
         @for (vehicule of slot.vehicules; track $index) {
-          {{displayVehicleIcon(vehicule)}}
+
+
+         
+        <img [src]="displayVehicleRealIcon(vehicule)" width="32" height="32">
+         
         }
       </div>
     }

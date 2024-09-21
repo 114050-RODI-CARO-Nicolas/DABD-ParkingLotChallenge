@@ -39,6 +39,22 @@ export class ParkingmapComponent implements OnInit {
     }
   }
 
+  displayVehicleRealIcon(vehicleType: VehiculeType): string {
+    //console.log('display Vehicle Icon. vehicleType: ', vehicleType)
+    switch (vehicleType) {
+      case VehiculeType.CAR:
+        return 'assets/icons/car-front.svg'; 
+      case VehiculeType.MOTORCYCLE:
+        return  'assets/icons/bicycle.svg';
+      case VehiculeType.TRUCK:
+        return  'assets/icons/truck.svg'; 
+      default:
+        return '?'; 
+    }
+  }
+
+  
+
   
 
 
